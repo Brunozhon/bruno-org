@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Confirm user account | Bruno Orgnization</title>
+  </head>
+  <body>
+    <p>Hello <span id="user"></span>!</p>
+    <h2>Change or confirm username</h2>
+    <input id="name" value="" />
+    <button type="button" onclick="submit()">Submit</button>
+    <script>
+      var in = document.getElementById("name");
+      var user = document.getElementById("user");
+      user.innerHTML = localStorage.getItem("name");
+      function submit() {
+        localStorage.setItem("name", in.value);
+      }
+    </script>
+  </body>
+</html>
