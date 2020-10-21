@@ -1,6 +1,7 @@
 import time, ramdom
 which = ans = rand = None
 dog = cat = hamster = 0
+items = []
 
 def intro():
   print('''
@@ -15,6 +16,9 @@ def intro():
     room2()
   elif which == 3:
     room3()
+  elif which == 4:
+    room4()
+  choice()
   
 def room1():
   print("You go to a hall. You go on a train.")
@@ -70,4 +74,52 @@ def room3():
     Hamsters: {hamster}
   ''')
   
-intro()
+def room4():
+  print("You found something on the ground. It is a sword.")
+  ans = input("Do you  want to pick it?")
+  if ans = "Yes":
+    items.append("sword")
+    print("You picked it up and you led yourself to a epic life. You survive, fight, and all the other stuff.")
+    time.sleep(2)
+    print("It comes to an end, where you surpass all levels, and then you got a bow, sheild, and parachute.")
+    items.append("bow")
+    items.append("sheild")
+    items.append("parachute")
+  else:
+    print("A tiger instantly kills you.")
+  
+sugar = chocobar = chocosugar = chocosugarproxide = 0 # Chocosugarproxide?
+banksugar = bankchocobar = bankchocosugarproxide = 100000000000000
+def sugarintro():
+  ans = input('''
+  What do you want to do?
+  
+  SC = sugar for chocobar
+  CS = chocobar for sugar
+  STS = steal sugar from bank
+  STC = steal chocobar from bank
+  ''')
+  if ans == "SC":
+    ans = int(input("How much chocobars? 10 sugar = chocobar"))
+    sugar = sugar - ans * 10
+    chocobar = chocobar + ans
+  elif ans = "CS":
+    ans = int(input("How much sugar? chocobar = 10 sugar"))
+    sugar = sugar + ans
+    chocobar = chocobar - ans / 10
+  elif ans = "STS":
+    #banksugar = 0
+    sugar = sugar + banksugar
+    print("The bank quickly refils")
+  elif ans = "STC":
+    chocobar = chocobar + bankchocobar / 4
+ 
+def choice():
+  rand = random.randrange(0,1)
+  if rand = 0:
+    intro()
+  else:
+    sugarintro()
+    
+choice()
+  
